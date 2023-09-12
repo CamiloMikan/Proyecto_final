@@ -1,0 +1,21 @@
+/* Estilo para centrar el ícono de Ionic dentro de un elemento */
+ion-icon {
+    color: #EA9010;
+    width: 100px;
+    /* Ancho del contenedor */
+    height: 40px;
+    /* Altura del contenedor */
+
+}
+
+ion-card-title {
+    color: #EA9010;
+    text-align: center;
+}
+
+/* Estilo para el ion-card con bordes de color y sombra */
+ion-card {
+    border-radius: 10px;
+    border: 2px solid #EA9010; /* Color y grosor del borde */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4); /* Sombra con desplazamiento, tamaño y color */
+}

@@ -1,0 +1,7 @@
+{
+  "name": "sena",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

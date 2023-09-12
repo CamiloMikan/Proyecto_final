@@ -1,0 +1,23 @@
+ion-tab-bar {
+    --background: #EA9010;
+  }
+
+  .tab {
+    color: white;
+  }
+
+/* Estilo para el contenedor principal */
+.photo-container {
+  position: relative; /* Permite posicionar los elementos internos */
+}
+
+/* Estilo para la fecha */
+.date {
+  position: absolute; /* Coloca la fecha en una posición absoluta dentro del contenedor */
+  bottom: 0; /* Coloca la fecha en la parte inferior del contenedor */
+  left: 0; /* Coloca la fecha en la parte izquierda del contenedor */
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para la fecha */
+  color: white; /* Color del texto de la fecha */
+  padding: 4px 8px; /* Espaciado interior para la fecha */
+  font-size: 14px; /* Tamaño de fuente de la fecha */
+}

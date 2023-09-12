@@ -1,0 +1,27 @@
+<ion-header class="ion-text-center">
+  <ion-toolbar>
+    <ion-title>
+      Pokédex
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let pokemon of listPokemon">
+      <ion-thumbnail slot="start">
+        <img [src]="pokemon?.sprites?.front_default" alt="Imagen de {{ pokemon?.name }}">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Id: {{ pokemon?.id }}</h2>
+        <h2>Name: {{ pokemon?.name }}</h2>
+        <p>Type:
+          <span *ngFor="let type of pokemon?.types; let last = last">
+            {{ type.type.name }}
+            <ng-container *ngIf="!last">, </ng-container>
+          </span>
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

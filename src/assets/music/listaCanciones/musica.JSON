@@ -1,0 +1,33 @@
+[
+    {
+        "name": "All",
+        "date": "2023-07-30",
+        "music2": [
+            {
+                "title": "Sunburts",
+                "tpo": true,
+                "music": "music/canciones/Sunburst.mp3"
+            },
+            {
+                "title": "Back_To_You",
+                "tpo": true,
+                "music": "music/canciones/Back_To_You.mp3"
+            },
+            {
+                "title": "Infectious",
+                "tpo": true,
+                "music": "music/canciones/Infectious.mp3"
+            },
+            {
+                "title": "Life",
+                "tpo": true,
+                "music": "music/canciones/Life.mp3"
+            },
+            {
+                "title": "Thunder",
+                "tpo": true,
+                "music": "music/canciones/Thunder.mp3"
+            }
+        ]
+    }
+]

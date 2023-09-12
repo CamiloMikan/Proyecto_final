@@ -1,0 +1,30 @@
+<ion-content>
+  <img src="assets/arriba2.png" alt="afs">
+  
+  <div class="formulario">
+    <ion-card class="card__login">
+      <ion-card-header style="--background: #EA9010;">
+        <ion-card-title>LOGIN</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <form class="form__login" (ngSubmit)="login()">
+
+
+
+          <ion-input placeholder="  username" [(ngModel)]="email" name="email" type="email"></ion-input>
+
+
+
+          <ion-input placeholder="  password" [(ngModel)]="password" name="password" type="password"></ion-input>
+
+
+          
+          <ion-button style="--background: #EA9010;" expand="full" type="submit">Ingresar</ion-button>
+
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <img src="assets/abajo2.png" alt="afs">
+
+</ion-content>
