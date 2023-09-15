@@ -9,15 +9,18 @@ import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 })
 export class CameraPage implements OnInit {
 
-  imageSource: any; // Almacena la fuente de la imagen tomada con la cámara
-  photos: { image: string, captureDate: Date }[] = []; // Arreglo para almacenar las fotos y sus fechas
+  imageSource: any; 
+  photos: { title: string, image: string, captureDate: Date }[] = [];
+  estadoToken: any;
+  photoCount = 1;
 
   constructor(private router: Router) { }
 
   ngOnInit() {
+    this.ValidacionToken();
   }
 
-  // Función para tomar una foto
+  
   takePicture = async () => {
     const image = await Camera.getPhoto({
       quality: 90,
@@ -28,16 +31,21 @@ export class CameraPage implements OnInit {
   
     this.imageSource = image.dataUrl;
   
-    // Obtener la fecha actual
     const captureDate = new Date();
-  
-    // Agregar la imagen y la fecha a la lista de fotos
-    this.photos.push({ image: this.imageSource, captureDate: captureDate });
+    const title = `Foto ${this.photoCount}`;
+    this.photoCount++;
+    
+    this.photos.push({ title: title, image: this.imageSource, captureDate: captureDate });
   }
   
-  // Función para regresar a la página 'cards'
-  back(){
-    this.router.navigate(['./cards'])
+
+  ValidacionToken() {
+    this.estadoToken = localStorage.getItem('token');
+    this.estadoToken = JSON.parse(this.estadoToken);
+
+    if (this.estadoToken === false) {
+      this.router.navigate(['./login']);
+    }
   }
 
 }

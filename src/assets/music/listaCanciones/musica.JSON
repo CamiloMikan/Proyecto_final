@@ -1,7 +1,6 @@
 [
     {
         "name": "All",
-        "date": "2023-07-30",
         "music2": [
             {
                 "title": "Sunburts",
@@ -27,6 +26,32 @@
                 "title": "Thunder",
                 "tpo": true,
                 "music": "music/canciones/Thunder.mp3"
+            },
+
+            {
+                "title": "A Veces",
+                "tpo": true,
+                "music": "music/canciones/A_Veces.mp3"
+            },
+            {
+                "title": "Así Soy Yo",
+                "tpo": true,
+                "music": "music/canciones/Así_Soy_Yo.mp3"
+            },
+            {
+                "title": "Categoría 5",
+                "tpo": true,
+                "music": "music/canciones/Categoría_5.mp3"
+            },
+            {
+                "title": "Ojitos Chiquitos",
+                "tpo": true,
+                "music": "music/canciones/Ojitos_Chiquitos.mp3"
+            },
+            {
+                "title": "Un Coco",
+                "tpo": true,
+                "music": "music/canciones/Un_Coco.mp3"
             }
         ]
     }

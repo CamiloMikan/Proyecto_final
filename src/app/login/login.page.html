@@ -8,7 +8,8 @@
       </ion-card-header>
       <ion-card-content>
         <form class="form__login" (ngSubmit)="login()">
-
+          <ion-text color="danger" *ngIf="mensaje">{{ mensaje }}</ion-text>
+          
 
 
           <ion-input placeholder="  username" [(ngModel)]="email" name="email" type="email"></ion-input>
@@ -20,6 +21,12 @@
 
           
           <ion-button style="--background: #EA9010;" expand="full" type="submit">Ingresar</ion-button>
+          <ion-text color="danger" *ngIf="mensaje">{{ mensajeError }}</ion-text>
+          
+
+          <h3>¿No tienes cuenta?</h3>
+
+          <ion-button expand="full" (click)="navigateToRegister()">Registarate</ion-button>
 
         </form>
       </ion-card-content>

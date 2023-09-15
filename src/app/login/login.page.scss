@@ -1,33 +1,37 @@
- .formulario{
-  display: grid;
-  place-items: center;
-}
+ .formulario {
+   display: grid;
+   place-items: center;
+ }
 
-ion-card{
-  border-radius: 10px;
-}
+ ion-card {
+   border-radius: 10px;
+ }
 
-  
-  /* Estilos para el título del formulario */
-  ion-card-title {
-    text-align: center;
-    color: white;
-  }
-  
-  /* Estilos para los elementos de entrada (input) */
-  ion-input {
-    margin-top: 5px;
-    padding: 50px;
-    background:  #fde3be ;
-    border-radius: 10px;
-    text-align: left;
-  }
-  
-  /* Estilos para el botón */
-  ion-button {
-    --background: #EA9010;
-    color: white; 
-    margin-top: 10px;
-    
-  }
-  
+
+
+ ion-card-title {
+   text-align: center;
+   color: white;
+ }
+
+
+ ion-input {
+   margin-top: 5px;
+   padding: 50px;
+   background: #fde3be;
+   border-radius: 10px;
+   text-align: left;
+ }
+
+
+ ion-button {
+   --background: #EA9010;
+   color: white;
+   margin-top: 10px;
+
+ }
+
+ h3 {
+   text-align: center;
+   margin-top: 10px;
+ }

@@ -1,17 +1,14 @@
-<ion-content [fullscreen]="true">
-  <h1>MUSICA </h1>
+<ion-content class="custom-background">
+  <div class="background-top"></div>
+  <h1 >MUSICA </h1>
 
   <ion-card-content>
     <ion-item *ngFor="let cancion of listCanciones">
       {{ cancion.title }}
       <ion-icon *ngIf="cancion.tpo" slot="end" name="volume-high-outline" (click)="playMusic(cancion)"></ion-icon>
-      <ion-icon *ngIf="!cancion.tpo" slot="end" (click)="pauseMusic(cancion)" name="pause-outline"></ion-icon>
-      
+      <ion-icon *ngIf="!cancion.tpo" slot="end" (click)="pauseMusic(cancion)" name="pause-outline"></ion-icon>     
     </ion-item>    
-  </ion-card-content>
-
-  <ion-icon size="large" name="exit-outline" (click)="back()"></ion-icon>
-  
+  </ion-card-content>  
 </ion-content>
 
 

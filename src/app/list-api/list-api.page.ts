@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { PokemonService } from '../Services/pokemon.service'; // Si ambos archivos están en el mismo directorio
-
+import { PokemonService } from '../Services/pokemon.service'; 
 @Component({
   selector: 'app-list-api',
   templateUrl: './list-api.page.html',
@@ -37,13 +36,18 @@ export class ListApiPage implements OnInit {
 
 
     getPokemons() {
-      for (let i = 1; i <= 150; i++) {
+      for (let i = 1; i <= 151; i++) {
         this.pokeService.getPokemon(i).subscribe(
           (res) => {
             this.listPokemon.push(res);
+
+            if (this.listPokemon.length === 151) {
+              
+              this.listPokemon.sort((a, b) => a.id - b.id);
+            }
           },
           (err) => {
-            // Manejar el error aquí si es necesario
+            
           }
         );
       }

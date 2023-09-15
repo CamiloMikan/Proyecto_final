@@ -8,9 +8,12 @@ import { Router } from '@angular/router';
 })
 export class CardsPage implements OnInit {
 
+  estadoToken: any;
+
   constructor(private router:Router) { }
 
   ngOnInit() {
+    this.ValidacionToken();
   }
 
   navigateToRegister() {
@@ -27,6 +30,15 @@ export class CardsPage implements OnInit {
 
   navigateToApi() {
     this.router.navigate(['/list-api']);
+  }
+
+  ValidacionToken() {
+    this.estadoToken = localStorage.getItem('token');
+    this.estadoToken = JSON.parse(this.estadoToken);
+
+    if (this.estadoToken === false) {
+      this.router.navigate(['./login']);
+    }
   }
 
 }

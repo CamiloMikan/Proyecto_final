@@ -11,23 +11,38 @@ export class LoginPage implements OnInit {
   email: string = '';
   password: string = '';
 
+  mensaje: string = '';
+  mensajeError: string = '';
+
   token = false;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
+
   ngOnInit() {
-    localStorage.setItem('token',JSON.stringify(this.token));
+    localStorage.setItem('token', JSON.stringify(this.token));
   }
 
-
   login() {
+    const storedUserData = localStorage.getItem(this.email);
 
-    if (this.email == '123' && this.password == '123') {
-      this.router.navigate(['/cards']);
-      this.token = true;
-      console.log(this.token)
-      localStorage.setItem('token',JSON.stringify(this.token));
+    if (storedUserData) {
+      const userData = JSON.parse(storedUserData);
+      const storedUserName = userData[0];
+      const storedPassword = userData[1];
+
+      if (this.email === storedUserName && this.password === storedPassword) {
+        this.router.navigate(['/cards']);
+        this.token = true;
+        localStorage.setItem('token', JSON.stringify(this.token));
+      } else {
+        this.mensaje = 'Error, el nombre de usuario o contraseña son incorrectos';
+      }
     } else {
-      console.log('Usuario y contraseña incorrectos');
+      this.mensajeError = 'Usuario no encontrado' ;
     }
+  }
+
+  navigateToRegister() {
+    this.router.navigate(['/register']);
   }
 }

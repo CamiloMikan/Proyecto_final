@@ -6,18 +6,49 @@ ion-tab-bar {
     color: white;
   }
 
-/* Estilo para el contenedor principal */
+
 .photo-container {
-  position: relative; /* Permite posicionar los elementos internos */
+  position: relative; 
 }
 
-/* Estilo para la fecha */
+
 .date {
-  position: absolute; /* Coloca la fecha en una posición absoluta dentro del contenedor */
-  bottom: 0; /* Coloca la fecha en la parte inferior del contenedor */
-  left: 0; /* Coloca la fecha en la parte izquierda del contenedor */
-  background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para la fecha */
-  color: white; /* Color del texto de la fecha */
-  padding: 4px 8px; /* Espaciado interior para la fecha */
-  font-size: 14px; /* Tamaño de fuente de la fecha */
+  position: absolute; 
+  bottom: 0;
+  left: 0;
+  color: white;
+  padding: 4px 8px; 
+  font-size: 14px; 
 }
+
+.title {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  color: white;
+  padding: 4px 8px; 
+  font-size: 34px; 
+}
+
+h1 {
+  text-align: center;
+  color: #EA9010;
+  margin-top: 10px;
+  border-bottom: 2px solid #EA9010;
+  margin-bottom: 10px;
+}
+
+.background-top {
+  background-image: url('/assets/arriba_tra.png'); /* Ruta a tu imagen de fondo superior */
+  background-repeat: no-repeat;
+  background-size: 250px; /* O ajusta el tamaño según tus necesidades */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%; /* Ajusta la altura según tus necesidades */
+  z-index: -1; /* Asegura que esté detrás del contenido */
+}
+
+
+

@@ -1,9 +1,10 @@
 <ion-content>
-  <ion-icon size="large" name="exit-outline" (click)="back()"></ion-icon>
-
+  <div class="background-top"></div>
+   <h1>FOTOS</h1>
   <ion-card *ngFor="let photo of photos">
 
     <div class="photo-container">
+      <div class="title">{{ photo.title }}</div>
       <img src="{{ photo.image }}" />
       <div class="date">{{ photo.captureDate | date: 'dd/MM/yyyy' }}</div>
     </div>

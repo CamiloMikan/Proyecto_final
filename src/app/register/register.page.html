@@ -1,13 +1,36 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>register</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <img src="assets/arriba2.png" alt="afs">
+  
+  <div class="formulario">
+    <ion-card class="card__login">
+      <ion-card-header style="--background: #EA9010;">
+        <ion-card-title>REGISTER</ion-card-title>
+      </ion-card-header>
+      
+      <ion-card-content>
+        <form class="form__register">
+        
+            <ion-text style="text-align: center;" color="danger" *ngIf="mensajeError">{{ mensajeError }}</ion-text>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">register</ion-title>
-    </ion-toolbar>
-  </ion-header>
+            <ion-input placeholder="  username" [(ngModel)]="userName" name="email" type="email"></ion-input>
+  
+            <ion-input placeholder=" Password" [(ngModel)]="password" name="password" type="password"></ion-input>
+                  
+            <ion-input placeholder=" Repeat Password" [(ngModel)]="repeatPassword" name="repeatPassword" type="password"></ion-input>
+          
+
+          <ion-text color="danger" *ngIf="mensaje">{{ mensaje }}</ion-text>
+
+          <ion-button expand="full" (click)="validarCampos()" type="submit">Registrarse</ion-button>
+
+          <h3>¿Ya tienes cuenta?</h3>
+
+          <ion-button expand="full" (click)="navigateToLogin()">Inicia sesión</ion-button>
+        </form>
+
+      </ion-card-content>
+
+    </ion-card>
+  </div>
+  <img src="assets/abajo2.png" alt="afs">
 </ion-content>
